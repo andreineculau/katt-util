@@ -53,14 +53,21 @@ main = (args = process.args) ->
     if args.ignoreCommon
       ignoreHeaders = ignoreHeaders.concat [
         'accept-encoding'
+        'accept-language'
         'cache-control'
         'connection'
         'content-encoding'
         'content-length'
+        'expires'
         'date'
         'host'
         'last-modified'
+        'origin'
         'pragma'
+        'referer'
+        'server'
+        'user-agent'
+        'x-requested-with'
       ]
     blueprint = har2katt har, ignoreHeaders
     console.log blueprint
